@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090914">
+    <title>Day #6 Login Project| Asteral Void Walker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main class="auth-card">
+        <div class="logo">✦</div>
+
+        <!-- Sign In Screen -->
+        <section id="loginScreen" class="auth-screen">
+            <h1>Welcome back</h1>
+            <p class="subtitle">Sign in to continue your journey.</p>
+
+            <form id="loginForm">
+                <label for="loginEmail">Email address</label>
+                <input id="loginEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+
+                <label for="loginPassword">Password</label>
+                <div class="password-box">
+                    <input id="loginPassword" type="password" placeholder="Enter your password"
+                        autocomplete="current-password" required minlength="8">
+                    <button type="button" class="toggle-password" data-target="loginPassword">Show</button>
+                </div>
+
+                <div class="options">
+                    <label class="check">
+                        <input type="checkbox" id="rememberMe">
+                        Remember me
+                    </label>
+                    <a href="#forgot" id="forgotLink">Forgot password?</a>
+                </div>
+
+                <button class="submit" type="submit">Sign in →</button>
+                <p id="loginMessage" class="message" role="status"></p>
+            </form>
+
+            <p class="footer">
+                Don't have an account?
+                <a href="#signup" id="showSignup">Create account</a>
+            </p>
+        </section>
+
+        <!-- Create Account Screen -->
+        <section id="signupScreen" class="auth-screen" hidden>
+            <h1>Create account</h1>
+            <p class="subtitle">Start your journey with us.</p>
+
+            <form id="signupForm">
+                <label for="fullName">Full name</label>
+                <input id="fullName" type="text" placeholder="Your full name" autocomplete="name" required minlength="2"
+                    maxlength="80">
+
+                <label for="signupEmail">Email address</label>
+                <input id="signupEmail" type="email" placeholder="you@example.com" autocomplete="email" required>
+
+                <label for="signupPassword">Create password</label>
+                <div class="password-box">
+                    <input id="signupPassword" type="password" placeholder="At least 8 characters"
+                        autocomplete="new-password" required minlength="8">
+                    <button type="button" class="toggle-password" data-target="signupPassword">Show</button>
+                </div>
+
+                <div class="strength-track">
+                    <div id="strengthBar"></div>
+                </div>
+                <p id="strengthText" class="strength-text">
+                    Password strength: Enter a password
+                </p>
+
+                <label for="confirmPassword">Confirm password</label>
+                <div class="password-box">
+                    <input id="confirmPassword" type="password" placeholder="Repeat your password"
+                        autocomplete="new-password" required minlength="8">
+                    <button type="button" class="toggle-password" data-target="confirmPassword">Show</button>
+                </div>
+
+                <label class="check terms">
+                    <input type="checkbox" id="acceptTerms" required>
+                    I agree to the demo terms.
+                </label>
+
+                <button class="submit" type="submit">Create account →</button>
+                <p id="signupMessage" class="message" role="status"></p>
+            </form>
+
+            <p class="footer">
+                Already have an account?
+                <a href="#login" id="showLogin">Sign in</a>
+            </p>
+        </section>
+
+        <p class="security-note">✧ GLASS AUTHENTICATION · DAY 06 / 100</p>
+    </main>
+</body>
+
+</html>
